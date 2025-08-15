@@ -1,4 +1,5 @@
 DailyFlow
+
 Welcome to DailyFlow, a dynamic and feature-rich single-page web application designed to help you organize your life with style and efficiency. Built with vanilla JavaScript, HTML, and CSS, this planner is a powerful demonstration of modern front-end development techniques without relying on external frameworks.
 
 The interface is clean, intuitive, and responsive, providing a seamless experience across all devices. All your tasks and notes are saved directly in your browser's local storage, ensuring your data is always available when you return.
