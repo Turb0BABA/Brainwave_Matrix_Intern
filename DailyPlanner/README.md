@@ -4,7 +4,7 @@ Welcome to DailyFlow, a dynamic and feature-rich single-page web application des
 
 The interface is clean, intuitive, and responsive, providing a seamless experience across all devices. All your tasks and notes are saved directly in your browser's local storage, ensuring your data is always available when you return.
 
-Features
+Features 
 Daily Planner Pro is packed with features to make your planning experience both productive and delightful:
 
 🗓️ Dynamic Calendar System
