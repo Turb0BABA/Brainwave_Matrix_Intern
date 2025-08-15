@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mobile-overlay"></div>
+    <nav class="sidebar collapsed">
+        <div class="sidebar-header">
+            <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+            <h1>DailyFlow</h1>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#" class="nav-link active" data-page="calendar-page"><i class="fas fa-calendar-alt"></i><span>Calendar</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-page="todo-page"><i class="fas fa-list-check"></i><span>To-Do</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-page="next-7-days-page"><i class="fas fa-calendar-week"></i><span>My Week</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-page="notes-page"><i class="fas fa-sticky-note"></i><span>Notes</span></a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <div id="calendar-page" class="page active">
+            <div class="page-header">
+                <div class="calendar-nav">
+                    <button class="nav-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="month-year"></h3>
+                    <button class="nav-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="view-switcher">
+                    <button class="nav-btn" id="view-switcher-btn">
+                        <span id="current-view-text">Month</span><i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul class="view-switcher-options">
+                        <li><a class="view-option" data-view="day">Day</a></li>
+                        <li><a class="view-option" data-view="week">Week</a></li>
+                        <li><a class="view-option active" data-view="month">Month</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="month-view" class="calendar-view active"></div>
+            <div id="week-view" class="calendar-view"></div>
+            <div id="day-view" class="calendar-view"></div>
+        </div>
+        <div id="todo-page" class="page">
+            <div class="page-header">
+                <h2>Today's To-Do</h2>
+            </div>
+            <ul id="todo-list" class="task-list"></ul>
+        </div>
+        <div id="next-7-days-page" class="page">
+            <div class="page-header">
+                <h2>Next 7 Days</h2>
+            </div>
+            <div id="next-7-days-list"></div>
+        </div>
+        
+        <div id="notes-page" class="page">
+            <div class="page-header">
+                <h2>Notes</h2>
+            </div>
+            <div class="notes-container">
+                <div id="notes-task-list" class="notes-column">
+                    </div>
+                <div id="notes-detail-view" class="notes-column">
+                    </div>
+            </div>
+        </div>
+
+        <button class="fab" id="fab-add-task">+</button>
+    </main>
+    <div class="modal-overlay" id="task-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Add New Task</h2>
+                <button id="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id="task-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-time">Time (optional)</label>
+                    <input type="time" id="task-time">
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" id="save-task-btn">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
